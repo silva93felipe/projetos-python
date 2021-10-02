@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Departamento {% endblock %}
+
+{% include 'navbar.html' %} 
+
+{% block content %}
+
+    {% for departamento in departamentos %}
+        <span>{{ departamento.descricao }}</span>
+
+    {% endfor%}
+
+
+{% endblock%}

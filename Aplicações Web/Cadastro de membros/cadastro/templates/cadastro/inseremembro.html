@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %} Novo Membro {% endblock %} 
+
+{% block content %}
+
+<div>
+    <h1>Novo Membro</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{forms|crispy}}
+        <input type="submit" value="Salvar">
+    </form>
+</div>
+
+{% endblock%}

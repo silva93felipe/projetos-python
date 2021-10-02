@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Membros {% endblock %}
+
+{% include 'navbar.html' %} 
+
+{% block content %}
+
+    {% for cargo in cargos %}
+        <span>{{ cargo.descricao }}</span>
+
+    {% endfor%}
+
+
+{% endblock%}
